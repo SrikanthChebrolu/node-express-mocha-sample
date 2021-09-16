@@ -30,21 +30,21 @@ const swaggerOptions = {
   },
   swagger: '2.0',
   openapi: '3.0.0',
-  basePath: '/test',
+  basePath: '/v1/api',
   schemes: ['http', 'https'],
   consumes: ['application/json'],
   produces: ['application/json'],
   apis: ['app.js']
 };
 const swaggerDocs = swaggerJSDoc(swaggerOptions);
-app.use('/api-docs', swaggerUI.serve);
-app.get('/api-docs', swaggerUI.setup(swaggerDocs, { explorer: true }));
+router.use('/api-docs', swaggerUI.serve);
+router.get('/api-docs', swaggerUI.setup(swaggerDocs, { explorer: true }));
 
-app.get('/test/us', (req, res) => {
+router.get('/v1/api/us', (req, res) => {
   res.send('Hello World!');
 });
 
-app.get('/test/users', (req, res, next) => {
+router.get('/v1/api/users', (req, res, next) => {
   res.send(['Tony', 'Lisa', 'Michael', 'Ginger', 'Food']);
 });
 

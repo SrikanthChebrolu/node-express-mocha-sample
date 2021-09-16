@@ -1,0 +1,8 @@
+{
+  "include": [
+    "src/app.js"
+  ],
+  "exclude": [
+    "test/**"
+  ]
+}
