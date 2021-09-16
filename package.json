@@ -1,0 +1,43 @@
+{
+  "name": "node-express-mocha-sample",
+  "version": "1.0.0",
+  "description": "This Project gives a Basic Idea of the Node Backed with Express and Test with Mocha",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon src/app.js",
+    "test": "nyc mocha",
+    "coverage": "nyc --reporter=html mocha",
+    "viewCoverage": "open -a 'Google Chrome' coverage/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SrikanthChebrolu/node-express-mocha-sample.git"
+  },
+  "keywords": [
+    "mocha"
+  ],
+  "author": "SrikanthChebrolu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SrikanthChebrolu/node-express-mocha-sample/issues",
+    "email": "srikanthchebrolu3333@gmail.com"
+  },
+  "homepage": "https://github.com/SrikanthChebrolu/node-express-mocha-sample#readme",
+  "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@babel/register": "^7.15.3",
+    "@types/mocha": "^9.0.0",
+    "@types/node": "^16.9.1",
+    "mocha": "^9.1.1",
+    "nodemon": "^2.0.12",
+    "nyc": "^15.1.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
+    "express": "^4.17.1",
+    "express-jsdoc-swagger": "^1.6.6",
+    "swagger-jsdoc": "^6.1.0",
+    "swagger-ui-express": "^4.1.6"
+  }
+}
